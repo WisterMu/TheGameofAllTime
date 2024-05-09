@@ -1,2 +1,2 @@
 # TheGameofAllTime
-For our summer project. DnD themed most cool :D
+For the Game of All Time. IDK if I set this up right...
