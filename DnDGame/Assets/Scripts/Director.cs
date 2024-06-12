@@ -28,7 +28,7 @@ public class Director : MonoBehaviour
     void OnTimelineStopped(PlayableDirector director)
     {
         // Example scene change based on timeline end
-        ChangeScene("3D");
+        ChangeScene("SampleScene 1");
     }
 
     public void ChangeScene(string sceneName)
