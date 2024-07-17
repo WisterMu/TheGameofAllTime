@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class InputManager : MonoBehaviour
 {
 
-    public TextDisplay text;
+    public TextManager text;
 
     // Start is called before the first frame update
     void Start()

@@ -4,7 +4,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class TextDisplay : MonoBehaviour
+public class TextManager : MonoBehaviour
 {
     public TextMeshProUGUI uiText;
 
