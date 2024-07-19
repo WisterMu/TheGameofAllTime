@@ -27,6 +27,7 @@ public class InputManager : MonoBehaviour
     // Action to perform when left click is detected
     void HandleLeftClick()
     {
-        text.UpdateText("Testing updated text");
+        // text.UpdateTextOverride("Testing updated text");
+        text.UpdateText();
     }
 }
