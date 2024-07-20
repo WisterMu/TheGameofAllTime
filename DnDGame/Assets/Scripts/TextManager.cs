@@ -24,7 +24,7 @@ public class TextManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        // TODO: animate text appearing letter by letter?
     }
 
     // Call this method to change the text of this object directly
