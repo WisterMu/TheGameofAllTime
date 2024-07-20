@@ -209,9 +209,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c00313fd84976514a99044cad99890ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  imageArray:
+  objectArray:
   - {fileID: 1133044010}
-  imageLibrary:
+  manLibrary:
   - {fileID: 2800000, guid: 76d4d6bef93ca9449828223eef72f082, type: 3}
   - {fileID: 2800000, guid: 54181a27fe2c5fd4596457b0bb43dbf1, type: 3}
 --- !u!4 &505811351
@@ -1238,7 +1238,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9a3be6d86187b84692a59cd60d6a8e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  text: {fileID: 1070243644}
+  textManager: {fileID: 1070243644}
+  imageManager: {fileID: 505811350}
 --- !u!4 &2120922165
 Transform:
   m_ObjectHideFlags: 0

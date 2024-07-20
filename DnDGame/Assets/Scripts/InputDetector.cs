@@ -6,7 +6,8 @@ using UnityEngine.UI;
 public class InputManager : MonoBehaviour
 {
 
-    public TextManager text;
+    public TextManager textManager;
+    public ImageManager imageManager;
 
     // Start is called before the first frame update
     void Start()
@@ -28,6 +29,7 @@ public class InputManager : MonoBehaviour
     void HandleLeftClick()
     {
         // text.UpdateTextOverride("Testing updated text");
-        text.UpdateText();
+        textManager.UpdateText();
+        imageManager.UpdateImage();
     }
 }
