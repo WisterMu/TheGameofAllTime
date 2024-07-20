@@ -9,7 +9,8 @@ using UnityEngine.UI;
 public class TextManager : MonoBehaviour
 {
     public TextMeshProUGUI uiText;
-    List<string> dialogueList = new List<string> {"One", "Two", "Three"};
+    List<string> dialogueList = new List<string>();
+    List<string> commandList = new List<string>();
     int dialogueIndex = 0;
     public TextAsset dialogueInput;     // Drag and drop text file to load
 
@@ -48,7 +49,39 @@ public class TextManager : MonoBehaviour
         {
             string text = textFile.ToString();              // Convert TextAsset to string
             string[] textArray = text.Split("\n");          // Split file into separate lines
-            dialogueList = new List<string>(textArray);     // Convert array into list
+            // Debug.Log(textArray);
+            // dialogueList = new List<string>(textArray);     // Convert array into list
+
+            foreach (string line in textArray)  // Check each line separately to see if it's a command or not
+            {
+                // No newlines to worry about, thankfully
+                // foreach(char ch in line)
+                // {
+                //     if (ch == '\n')
+                //     {
+                //         Debug.Log("NEWLINE FOUND");
+                //     }
+                // }
+
+                if (line[0] == '/')     // if the line starts with a slash (this is a command)
+                {
+                    commandList.Add(line);
+                } 
+                else 
+                {
+                    dialogueList.Add(line);
+                }
+            }
+        }
+
+        // print out the stored lines for debugging
+        foreach (string line in commandList)
+        {
+            Debug.Log("COMMAND: " + line);
+        }
+        foreach (string line in dialogueList)
+        {
+            Debug.Log("DIALOGUE: " + line);
         }
 
     }

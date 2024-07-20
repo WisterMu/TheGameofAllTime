@@ -23,7 +23,7 @@ public class ImageManager : MonoBehaviour
     {
         imageLibrary.Add(manLibrary);   // add the images from man into the library
         imageLibrary.Add(manLibrary);   // second one for the 2nd man
-        Debug.Log("Image objects in array: " + objectArray.Count());
+        Debug.Log("Image objects in array: " + objectArray.Length);
     }
 
     // Update is called once per frame
@@ -45,7 +45,7 @@ public class ImageManager : MonoBehaviour
         // Debug.Log(objectIndex);
         libraryIndex = Random.Range(0, 3);      // randomly selects next image
         // libraryIndex = (libraryIndex + 1) % imageLibrary[objectIndex].Length;   // selects next image
-        Debug.Log(libraryIndex);
+        // Debug.Log(libraryIndex);
     }
 
     // Swaps a chosen Raw Image object (charIndex) into the chosen image stored in the libraru (imageIndex)
