@@ -31,14 +31,34 @@ public class TextManager : MonoBehaviour
     // Call this method to change the text of this object directly
     public void UpdateTextOverride(string newText)
     {
-        uiText.text = newText;
+        // only updates the text when it's not empty
+        if (string.IsNullOrWhiteSpace(newText))
+        {
+            // empty string can be used as a buffer action
+            Debug.Log("EMPTY LINE");
+        }
+        else
+        {
+            uiText.text = newText;
+        }
     }
 
     // Call this method to change the text using its internal list of strings
     public void UpdateText()
     {
-        uiText.text = dialogueList[dialogueIndex];                  // swaps text to next one in list
-        dialogueIndex = (dialogueIndex + 1) % dialogueList.Count;   // iterate dialogue index, loop back if overflow
+        string newText = dialogueList[dialogueIndex];
+        // only updates the text when it's not empty
+        if (string.IsNullOrWhiteSpace(newText))
+        {
+            // empty string can be used as a buffer action
+            Debug.Log("EMPTY LINE");
+            dialogueIndex = (dialogueIndex + 1) % dialogueList.Count;   // iterate dialogue index, loop back if overflow
+        }
+        else
+        {
+            uiText.text = newText;                                      // swaps text to next one in list
+            dialogueIndex = (dialogueIndex + 1) % dialogueList.Count;   // iterate dialogue index, loop back if overflow
+        }
     }
 
     // Parse a text file to load into the list of strings for the dialogue
@@ -63,6 +83,8 @@ public class TextManager : MonoBehaviour
                 //     }
                 // }
 
+                // likely want to treat each list as a "timeline" for each action to perform in order, and in sync if needed
+                // this means we'll need empty / buffer actions
                 if (line[0] == '/')     // if the line starts with a slash (this is a command)
                 {
                     commandList.Add(line);

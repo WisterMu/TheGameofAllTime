@@ -20,7 +20,7 @@ public class InputManager : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
-            Debug.Log("Left Mouse Button Clicked");
+            // Debug.Log("Left Mouse Button Clicked");
             HandleLeftClick();
         }
     }
