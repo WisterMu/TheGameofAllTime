@@ -1,11 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
-using UnityEditor.VersionControl;
+// using UnityEditor.VersionControl;
 using UnityEngine;
 using UnityEngine.TextCore.Text;
 using UnityEngine.UI;
-using UnityEngine.WSA;
+// using UnityEngine.WSA;
 
 public class ImageManager : MonoBehaviour
 {

@@ -18,3 +18,5 @@ Ione: Let’s just get going. Look! A priest is tending to the chapel, I’m sur
 new dialogue
 
 dialogue and //command testing
+
+formatting test <i>italics</i> <b>bold</b>
